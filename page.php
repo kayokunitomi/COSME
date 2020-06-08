@@ -6,9 +6,7 @@ Template Name: 固定ページ
 
 <?php get_header(); ?>
 
-      
 
-page.php
          <!-- コンテンツを表示 -->
                 <?php 
                 $page_data = get_page_by_path('page');
@@ -22,6 +20,5 @@ page.php
               
                 ?>
                 
-
 
 <?php get_footer(); ?>

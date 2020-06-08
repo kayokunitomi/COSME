@@ -14,7 +14,7 @@ Template Name: ネイル一覧
       <div class="shopping_main">
        <div class="container">
 
-<!-- 指定した投稿記事の一部を出力（リンク・アイキャッチ・タイトル） -->
+<!-- 指定したカテゴリーの記事の一部を出力（リンク・アイキャッチ・タイトル） -->
                   <?php
           $arg = array(
                     'posts_per_page' => 6, // 表示する件数

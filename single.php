@@ -22,8 +22,8 @@ Template Name: 各商品ページ
                 // 本文を表示する
                 // echo $content;
                 // 本文を表示、コンテンツ内でショートコードを使えるようにする
-                echo do_shortcode($content);
-              
+                // echo do_shortcode($content);
+                the_content();
                 ?>
  
 

@@ -34,7 +34,7 @@ Template Name: インフォメーションページ
               <li>
                 <div class="info-up">
                   <p class="information-date"><?php echo get_the_date(); ?></p><!-- 記事の日付 -->
-                  <p class="information-title"><?php the_title(); ?></p><!-- 記事のタイトル -->
+                  <p class="information-title" id="post-<?php the_ID(); ?>"><?php the_title(); ?></p><!-- 記事のタイトル -->
                 </div>
                 <div class="info-down">
                   <p class="information-content"><?php the_content() ?></p><!-- 本文内容を表示 -->

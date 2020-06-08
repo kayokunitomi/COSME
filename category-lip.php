@@ -15,7 +15,7 @@ Template Name: リップ一覧 （カスタム投稿「リップ商品一覧を�
     <div class="container">
 
       <!-- カスタム投稿記事の一部を出力（リンク・アイキャッチ・タイトル）  -->
-      <?php $posts = get_posts('post_type=lip&posts_per_page=6'); ?><!-- 記事表示件数 -->
+      <?php $posts = get_posts('post_type=lip&posts_per_page=6'); ?><!-- スラッグ名と記事表示件数 -->
       <?php if (!empty($posts)): ?>
       <?php foreach ($posts as $post):setup_postdata($post); ?>
 

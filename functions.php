@@ -208,7 +208,7 @@ function my_after_setup_theme(){
 // add_shortcode('jisaku', 'jisaku_shortcode');
 
 
- /*投稿・固定ページ内でphpをショートコードで読み込む*/
+ /*投稿・固定ページ内でphpファイルをショートコードで読み込む*/
 function my_php_Include($params = array()) {
   extract(shortcode_atts(array('file' => 'default'), $params));
   ob_start();
@@ -309,3 +309,8 @@ add_action( 'init', 'create2_post_type' );
   add_action( 'init', 'create4_post_type' );
 
 
+  /*ショートコードが使えない時に有効にする*/  
+//   function postjack($the_content) {
+//     return do_shortcode( $the_content );
+// }
+// add_filter('the_content', 'postjack');
