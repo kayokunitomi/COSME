@@ -9,11 +9,14 @@
   h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
 })(document);
 
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+  location = 'https://hoge.com/thanks/';
+}, false );
 
 jQuery(function($) {
 
   //jQueryが読み込まれているか確認できる
-// if(typeof jQuery != "undefined"){ 
+// if(typeof jQuery != "undefined"){
 // 	$(function(){
 // 		alert('jQuery is ready.')
 // 	});
@@ -28,14 +31,14 @@ jQuery(function($) {
           slidesToScroll: 4,
         });
 
-        
-    
+
+
 
 //MOREの表示テキスト変更
 // $(".news-list li span").text("READ MORE..");
 
 //スクロールでフェードイン
-  $(function(){ 
+  $(function(){
     function animation(){
       $('.fadeInUp').each(function(){
         //ターゲットの位置を取得
@@ -48,17 +51,17 @@ jQuery(function($) {
         if (scroll > target - windowHeight){
           $(this).css('opacity','1');
           $(this).css('transform','translateY(0)');
-        } 
+        }
         if (scroll < 100) {
           $(this).css('transform','translateY(50px)');
          }
       });
     }
-    
+
     animation();
     $(window).on('scroll load', function(){
       animation();
-      
+
     });
   });
 
@@ -73,7 +76,7 @@ $('#menu-item-372 a').prepend('<img src="http://localhost/wordpress1/wp-content/
 $('#menu-item-372 img').addClass('user');
 
 $('#menu-item-380 a').prepend('<img src="http://localhost/wordpress1/wp-content/themes/cosme/img/cart.png">');
- 
+
 $('#menu-item-380 img').addClass('cart');
 
 
@@ -86,11 +89,16 @@ $('a').wrapInner('<span>');
 //サイトマップのliのaの中にクラスを追加
 $('.sitemap-link a').prepend('<i class="fas fa-external-link-alt"></i>');
 
+
+//よくある質問のプラグイン内のテキスト削除後に、これに入れ替えた
+$('.su-spoiler-icon').after('<span class="question-title">ここに質問タイトルが入ります</span>');
+
+
   //VEGASの設定（トップページ）
   // $(function(){
   // $('#top-img').vegas({
   //   overlay: '/vegas//overlays/01.png',
-   
+
   //   delay: 7000,
   //       timer: true,
   //       firstTransition: 'fade2',
@@ -106,7 +114,41 @@ $('.sitemap-link a').prepend('<i class="fas fa-external-link-alt"></i>');
   //   ]
   // });
   // });
-  
- 
-});
 
+
+//運営会社ページのフォームの必須項目アラートでできるズレの修正
+  $('.wpcf7-submit').click(function(){
+      $('p.test').css({'padding-top':'40px'});
+      $('.form-input input').eq(0).css({'margin-bottom':'10px'});
+      $('.form-input input').eq(2).css({'margin-bottom':'10px'});
+  });
+
+
+  //トップに戻るボタンの設定
+    $(window).scroll(function() {
+        var a = $(window).scrollTop();
+        if (a > 1000) {
+            // 「#page-top」だと動作しない
+            $(".page-top p").fadeIn("slow");
+        } else {
+            $(".page-top p").fadeOut("slow");
+        }
+    });
+
+    $("#move-page-top").on("click", function(){
+        $("html, body").animate({scrollTop:0}, "slow");
+    });
+
+
+     //サイトマップliにid追加
+    $(function(){
+      $('li.sitemap-link').each(function(i){
+          $(this).attr('id','box' + (i+1));
+      });
+    });
+
+// $('.su-spoiler-icon').after('<span>');
+
+
+
+});
