@@ -26,7 +26,7 @@ Template Name: サイトマップページ
                 // echo $content;
                 // 本文を表示、コンテンツ内でショートコードを使えるようにする
                 echo do_shortcode($content);
-              
+      
                 ?>
                </div>
              </ul>

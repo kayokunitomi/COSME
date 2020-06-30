@@ -27,5 +27,8 @@
 
  
 <?php wp_footer(); ?><!--システム・プラグイン用-->
+<div id="page-top" class="page-top">
+    <p><a id="move-page-top" class="move-page-top">TOP</a></p>
+</div>
 </body>
 </html>

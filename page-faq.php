@@ -27,19 +27,19 @@ Template Name: 良くある質問ページ
               <div class="faq-menu">
                 <p class="menu-title">〜に関するご質問</p>
                 <ul>
-                  <li><a href="http://localhost/wordpress1/info/">
+                  <li><a href="#anchor">
                   <p class="faq-left">ご注文方法</p></a>
                   </li>
-                  <li><a href="http://localhost/wordpress1/info/">
+                  <li><a href="#anchor1">
                   <p class="faq-left">送料・配送</p></a>
                   </li>
-                  <li><a href="http://localhost/wordpress1/info/">
+                  <li><a href="#anchor2">
                   <p class="faq-left">お支払い方法</p></a>
                   </li>
-                  <li><a href="http://localhost/wordpress1/info/">
+                  <li><a href="#anchor3">
                   <p class="faq-left">返品・キャンセル</p></a>
                   </li>
-                  <li class="faq-line"><a href="http://localhost/wordpress1/info/">
+                  <li class="faq-line"><a href="#anchor4">
                   <p class="faq-left">その他</p></a>
                   </li>
                 </ul>

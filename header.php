@@ -18,19 +18,19 @@
   <div class="menu clearfix">
     <div class="container">
 
-    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="cosme sample site"></a>
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/ribbon.png" alt="cosme sample site"></a>
       <!--ヘッダーにメニューを表示させる-->
       <!-- <nav> -->
-       <?php 
+       <?php
        wp_nav_menu( array(
-                'theme_location'=>'mainmenu', 
-                'container'     =>'', 
+                'theme_location'=>'mainmenu',
+                'container'     =>'',
                 'menu_class'    =>'',
-                'items_wrap'    =>'<ul id="menu clearfix">%3$s</ul>')); 
-                
+                'items_wrap'    =>'<ul id="menu clearfix">%3$s</ul>'));
+
         ?>
       <!-- </nav> -->
- 
+
     </div>
   </div>
 

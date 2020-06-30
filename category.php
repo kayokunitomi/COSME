@@ -73,7 +73,7 @@ Template Name: 投稿カテゴリー
         
                 <?php dynamic_sidebar('wp-olive商品カテゴリー'); ?>
            
-                <?php dynamic_sidebar('wp-oliveショッピングカート'); ?>
+           
 
         </div>  
        

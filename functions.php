@@ -192,7 +192,7 @@ add_shortcode('slick', 'slick_func');
 // アイキャッチ画像関連
 function my_after_setup_theme(){
   // アイキャッチ画像を有効にする
-  add_theme_support( 'post-thumbnails' ); 
+  add_theme_support( 'post-thumbnails' );
   // アイキャッチ画像サイズを指定する（横：640px 縦：384）
   // 画像サイズをオーバーした場合は切り抜き
   set_post_thumbnail_size( 700, 515, true );
@@ -217,7 +217,7 @@ function my_php_Include($params = array()) {
   }
   add_shortcode('call_php', 'my_php_Include');
 
- 
+
    /*カスタム投稿タイプ作成（リップ商品）*/
 function create_post_type() {
   register_post_type( 'lip', // 投稿タイプスラッグ名
@@ -309,7 +309,7 @@ add_action( 'init', 'create2_post_type' );
   add_action( 'init', 'create4_post_type' );
 
 
-  /*ショートコードが使えない時に有効にする*/  
+  /***************ショートコードが使えない時に有効にする（五味さん）************/
 //   function postjack($the_content) {
 //     return do_shortcode( $the_content );
 // }

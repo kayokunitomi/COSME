@@ -52,6 +52,14 @@ a {
   color: #444;
 }
 
+a:visited {
+  color: #444;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 .clearfix::after {
   content: '';
   display: block;
@@ -95,7 +103,7 @@ html {
 
 .menu {
   background: white;
-  height: 78px;
+  height: 73px;
 }
 
 .menu .logo {
@@ -122,14 +130,14 @@ padding-left: 40px;
 .menu .user {
   width: 20px;
   height: 20px;
-  vertical-align: middle; 
+  vertical-align: middle;
   padding-right: 5px;
 }
 
 .menu .cart {
   width: 22px;
   height: 22px;
-  vertical-align: middle; 
+  vertical-align: middle;
   padding-right: 5px;
 }
 
@@ -140,19 +148,21 @@ padding-left: 40px;
 .menu a{
   color: #444;
   transition: 0.5s;
+
 }
 
 .menu a:hover {
   color: #fff;
   text-shadow: -1px 1px 5px #E4007F, 1px -1px 5px #E4007F;
+  text-decoration: none;
 }
 
 .top-wrapper {
-  background-image: url('img/wall.png');
+  background-image: url('img/top1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top 45%;
-  height: 833px;
+  height: 800px;
   width: 100%;
   clear: both;
   position: relative;
@@ -160,29 +170,43 @@ padding-left: 40px;
 
 .title-bg1 {
   position: absolute;
-  top: 20%;
-  left: 60%;
-  margin:0;
-  padding:0;  
- 
-}
-
-.title-bg2 {
-  position: absolute;
-  top: 29%;
-  left: 65%;
+  top: 7%;
+  left: 8.5%;
   margin:0;
   padding:0;
 }
-
-
-.title1, .title2 {
-  max-width: 29vw;
+.title1 {
+  max-width: 74%;
   height: auto;
   display: block;
 }
 
+.title-bg2 {
+  position: absolute;
+  bottom: 2%;
+  right: 1%;
+  margin:0;
+  padding:0;
+}
+.top2 {
+  max-width: 82%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
+.title-bg3 {
+  position: absolute;
+  bottom: 1.5%;
+  left: 1%;
+  margin:0;
+  padding:0;
+}
+.top3 {
+  max-width: 80%;
+  height: auto;
+  display: block;
+}
 
 /*新商品一覧*/
 
@@ -216,7 +240,9 @@ font-size: 15px;
   color: #E4007F;
 }
 
-
+.name a:hover {
+    text-decoration: none;
+}
 
 /*商品一覧*/
 .product-list {
@@ -227,7 +253,7 @@ font-size: 15px;
 
 .product-list .container {
   text-align: center;
-  
+
 }
 
 .product-list .main-title {
@@ -245,7 +271,7 @@ font-size: 15px;
 
 .product-list div.nail {
   position: relative;
- 
+
 }
 
 .product-list div.eye {
@@ -271,7 +297,7 @@ font-size: 15px;
     left: -40%;
     top: -25%;
     z-index: 1;
-    
+
 }
 
 .product-list div.eye:after {
@@ -315,7 +341,7 @@ font-size: 15px;
 }
 
 .product-list li {
-  
+
   background-color: #FFF;
     border-radius: 50%;
     border: 2px solid #e5b94b;
@@ -329,8 +355,8 @@ font-size: 15px;
 
 .product-list li img {
   max-width: 100%;
-  height: 350px; 
-  
+  height: 350px;
+
 }
 
 .product-list span {
@@ -347,9 +373,9 @@ font-size: 15px;
   height: 100%;
   position: relative;
   width: 100%;
-  font-weight: 700; 
+  font-weight: 700;
   text-align: center;
-
+  color: #444;
 }
 
 .product-list a:after {
@@ -420,14 +446,14 @@ font-size: 15px;
   background-repeat: no-repeat;
   position: relative;
   text-align: center;
-  
+
 }
 
 /* 上記のheightを指定してレスポンシブが崩れないようにするため、padding-topでheightを設定*/
 .flame-box::before {
 	display: block;
 	content: "";
-	padding-top: 100%; 
+	padding-top: 100%;
 }
 
 .concept-detail {
@@ -507,8 +533,8 @@ clear: both;
   border: 1px solid #eb62a1;
   float: right;
   margin-bottom: 13px;
-  image-rendering: pixelated; 
-  
+  image-rendering: pixelated;
+
 }
 
 figure {
@@ -553,9 +579,9 @@ figure:hover::before {
   flex-wrap: nowrap;
 }
 
-/* .insta-box, .twitter-box {
-  background: blue;
-} */
+.sns-box a:hover {
+text-decoration: none;
+}
 
 .insta-box {
   width: 50%;
@@ -754,7 +780,7 @@ footer {
   border-bottom: 1px #707070 solid;
   margin-bottom: 10px;
   height: 40px;
-  
+
 }
 
 .footer-link li a {
@@ -884,6 +910,10 @@ padding: 3px 7px 0;
 font-size: 17px;
 }
 
+.product-menu li a {
+  color: #444;
+  text-decoration: none;
+}
 
 .product-menu .border-left::before {
   content: "";
@@ -955,6 +985,7 @@ position: relative;
 
 .view-go a:hover {
 color: #E4007F;
+text-decoration: none;
 }
 
 .nail-box-right { /*テキストの両端を揃える*/
@@ -978,7 +1009,7 @@ color: #E4007F;
   background-repeat: repeat;
   width: 100%;
   padding: 105px 0;
- 
+
 }
 
 .shopping_main .container {
@@ -1068,7 +1099,7 @@ color: #E4007F;
   /* margin: 2em 0; */
   padding: 0;
   max-width: 168px;
-  
+
 }
 
 /*ラベル*/
@@ -1088,7 +1119,7 @@ color: #E4007F;
 /*ラベルホバー時*/
 .accbox label:hover {
     opacity: 0.7;
-  
+
 }
 
 /*チェックは隠す*/
@@ -1149,7 +1180,7 @@ p.custom-price {
 }
 
 .square img {
-  image-rendering: pixelated; 
+  image-rendering: pixelated;
   width: 450px;
 }
 
@@ -1355,6 +1386,15 @@ padding: 35px 0 80px;
 
 .sitemap-link a {
   font-size: 17px;
+}
+
+.sitemap-link span {
+  color: #444;
+}
+
+
+#box3, #box4, #box5 {
+	display: none;
 }
 
 /*-------------- お問い合わせフォーム --------------*/
@@ -1586,10 +1626,10 @@ padding-top: 30%; /* 高さの比率 */
 }
 
 .pics-left:before { /* フレーム枠 */
-  content: ''; 
-  display: block; 
-  position: absolute; 
-  top: 0; 
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -1598,10 +1638,10 @@ padding-top: 30%; /* 高さの比率 */
   }
 
   .pics-right:before { /* フレーム枠 */
-    content: ''; 
-    display: block; 
-    position: absolute; 
-    top: 0; 
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -1644,7 +1684,7 @@ padding-top: 30%; /* 高さの比率 */
 }
 
 .google-map iframe {
-  border: 1px solid #CCC;  
+  border: 1px solid #CCC;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1657,7 +1697,7 @@ padding-top: 30%; /* 高さの比率 */
 .google-map p {
   font-weight: 600;
   font-size: 21px;
- 
+
 }
 
 .google-map span {
@@ -1670,7 +1710,7 @@ padding-top: 30%; /* 高さの比率 */
  .flame-question {
    position: relative;
  }
- 
+
 .heading-title .title-box-faq {
   width: 165px;
 }
@@ -1695,7 +1735,14 @@ padding-top: 30%; /* 高さの比率 */
 
 .faq-menu li a {
   text-decoration: none;
+  color: #444;
 }
+
+.faq-menu li a:hover {
+  text-decoration: none;
+  color: #999;
+}
+
 p.faq-left {
   position: relative;
 }
@@ -1799,6 +1846,10 @@ p.menu-title {
   font-size: 19px;
 }
 
+.qa-title2 {
+  margin-top: 55px;
+}
+
 .qa-title:after {
   content: '';
   position: absolute;
@@ -1811,4 +1862,153 @@ p.menu-title {
 
 .each-faq {
   margin-bottom: 60px;
+}
+
+/***********上に上がるボタン**************/
+.page-top {
+  margin: 0;
+  padding: 0;
+}
+
+.page-top p {
+  margin: 0;
+  padding: 0;
+
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: none;
+}
+
+.move-page-top {
+  display: block;
+  background-color: rgba(229,185,75,0.6);
+  width: 100px;
+  height: 50px;
+
+
+  color: #fff;
+  line-height: 50px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.move-page-top:hover {
+text-decoration: none;
+color: white;
+}
+
+
+/*********** OLIVECART ************/
+
+/*グローバルナビの文字の大きさを変更*/
+nav#menu ul li a {
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 1px;
+}
+/*タイトルの文字の大きさを変更*/
+div.entry h2{
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: 1px;
+}
+/*商品写真の右にテキストを流す*/
+.contents img.size-medium {
+  float: left;
+  margin-right: 14px;
+  border: 1px solid #dcdcdc;
+}
+
+.question-title {
+  margin-left: 25px;
+}
+
+/*------ ログイン/新規登録ページ members-------*/
+
+.members-box {
+  border-top: 1px solid #ccc;
+  background-color: rgba(232, 70, 145, 0.2);
+  padding:70px 0 90px;
+}
+.members-box .container {
+  width: 66%;
+  margin: 0 auto;
+}
+
+.members-inside {
+  background-color: rgb(243, 234, 240);
+  border: 9px solid white;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 40px;
+}
+
+.members-title {
+border-bottom: 2px solid rgba(235,98,161,0.7);
+margin-bottom: 30px;
+}
+
+.first {
+  margin-left: 10px;
+  font-size: 14px;
+}
+.second {
+  font-size: 17px;
+}
+
+
+.login {
+  width: 46%;
+}
+
+.new-member {
+  width: 46%;
+}
+
+.login-form {
+  display: flex;
+  margin-bottom: 13px;
+}
+.login-form, .new-member {
+  font-size: 16px;
+}
+
+.my_form, .be-member {
+  font-size: 16px;
+}
+
+.my_forgot_pass {
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.password {
+  margin: 0 0 0 auto;
+}
+
+#login_user_name, #login_password {
+  height: 25px;
+  line-height: 25px;
+  padding-left: 5px;
+}
+
+.my_submit_btn, button {
+border-radius: 5px;
+background: #707070;
+color: white;
+font-weight: bold;
+outline: 0;
+font-size: 13px;
+padding: 4px 0;
+width: 76px;
+}
+
+.button-member {
+  margin-top: 10px;
 }
